@@ -84,9 +84,45 @@ const tarjetas = personas.map(
         const tarjeta = `<div class="tarjeta">
                             <h2>${obj.nombre} ${obj.apellidos}</h2>
                             <p>Edad: ${obj.edad}</p>
+                            <p>Mayor de edad: ${obj.edad > 17 ? "si" : "no"}
                         </div>`;
         return tarjeta;
     }
 )
 
 console.log(tarjetas.join(" "));
+
+
+//funciones
+
+const sumar = (num1, num2) =>{
+    console.log("Los numeros a sumar son: ");
+    console.log(num1 + " y "+ num2);
+}
+
+sumar(5,6);
+
+const saludar = ()=> {
+    console.log("Hola, bienvenido a la clase de POO");
+}
+saludar();
+
+const unObjetoX = {
+    altura: 10,
+    ancho: 5,
+    profundidad: 2
+}
+
+const unObjetoY = {
+    altura: 15,
+    ancho: 10,
+    profundidad: 4
+}
+
+const describirObjeto = (unObjeto) =>{
+    console.log("Altura: " +unObjeto.altura);
+    console.log("Ancho: "+unObjeto.ancho);
+    console.log("Profundidad: "+ unObjeto.profundidad);
+}
+
+describirObjeto(unObjetoY);
