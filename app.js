@@ -59,3 +59,34 @@ const NumerosMultiplicados = numeros.map(
 )
 
 console.log(NumerosMultiplicados);
+
+//Arrays de objetos
+const personas = [
+    {
+        nombre: "Juan",
+        edad: 30,
+        apellidos: "Pérez"
+    },
+    {
+        nombre: "Maria",
+        edad: 25,
+        apellidos: "Gomez"
+    },
+    {
+        nombre: "Pedro",
+        edad: 17,
+        apellidos: "Lopez"
+    }
+];
+
+const tarjetas = personas.map(
+    (obj) => {
+        const tarjeta = `<div class="tarjeta">
+                            <h2>${obj.nombre} ${obj.apellidos}</h2>
+                            <p>Edad: ${obj.edad}</p>
+                        </div>`;
+        return tarjeta;
+    }
+)
+
+console.log(tarjetas.join(" "));
